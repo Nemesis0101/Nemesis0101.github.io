@@ -1,1 +1,21 @@
-"use strict";function preloader(){var o=document.querySelector(".preloader"),e=document.querySelector(".stage__video");window.onload=function(){o.classList.add("preloader_loaded"),e.style.animation="stageFade 1.5s ease"}}function menu(){var o=document.querySelector(".menu"),e=document.querySelectorAll(".burger-menu__line"),r=document.querySelector(".burger-menu"),t=document.querySelector(".info"),c=document.querySelectorAll(".portfolio-card"),l=document.querySelectorAll(".portfolio-card-overlay");r.addEventListener("click",function(){t.classList.toggle("info_active"),o.classList.toggle("menu_theme-light"),e.forEach(function(o){o.classList.toggle("burger-menu__line_theme-light")}),r.classList.toggle("toggle"),c.forEach(function(o){o.classList.remove("show-portfolio-card")}),l.forEach(function(o){o.classList.remove("show-portfolio-card-overlay")})})}function showProjectCard(){var o=document.querySelectorAll(".portfolio-button"),r=document.querySelectorAll(".portfolio-card"),t=document.querySelectorAll(".portfolio-card-overlay");o.forEach(function(o,e){o.addEventListener("click",function(){r[e].classList.add("show-portfolio-card"),t[e].classList.add("show-portfolio-card-overlay")})})}function closeProjectCard(){var o=document.querySelectorAll(".portfolio-card-button"),r=document.querySelectorAll(".portfolio-card"),t=document.querySelectorAll(".portfolio-card-overlay");o.forEach(function(o,e){o.addEventListener("click",function(){r[e].classList.remove("show-portfolio-card"),t[e].classList.remove("show-portfolio-card-overlay")})})}preloader(),menu(),showProjectCard(),closeProjectCard();
+function preloader() {
+    let preloader = document.querySelector(".preloader");
+    let video = document.querySelector(".stage__video");
+
+    window.onload = function () {
+        preloader.classList.add("preloader_loaded");
+        video.style.animation = "stageFade 1.5s ease";
+    };
+}
+preloader();
+
+function menu() {
+    let burgerMenu = document.querySelector(".burger-menu");
+    let menuInfo = document.querySelector(".info");
+
+    burgerMenu.addEventListener("click", () => {
+        menuInfo.classList.toggle("info_active");
+        burgerMenu.classList.toggle("toggle");
+    });
+}
+menu();
