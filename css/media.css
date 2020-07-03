@@ -1,61 +1,41 @@
-@media (max-width: 1550px) {
-  html {
-    font-size: 15px;
-  }
-  .skills {
-    flex-direction: column;
-  }
-  .skills__item:not(:first-child) {
-    margin-top: 0.625rem;
-  }
-  .info-box-skills {
-    margin-top: 1.25rem;
-  }
-}
-
-@media (max-width: 1250px) {
-  html {
-    font-size: 12px;
-  }
+@media (max-width: 1000px) {
   .footer__title {
     display: none;
   }
 }
 
-@media (max-width: 900px) {
-  .info-box__title {
-    max-width: 100px;
+@media (max-width: 768px) {
+  html {
+    font-size: 16px;
   }
-  .portfolio-card {
-    width: 80%;
-  }
-  .portfolio-card-button {
-    padding: 11px;
-  }
-}
-
-@media (max-width: 600px) {
-  .portfolio-buttons {
+  .portfolio {
     flex-direction: column;
     align-items: flex-start;
+    max-width: 100%;
   }
-  .portfolio-buttons__portfolio-button + .portfolio-buttons__portfolio-button {
-    margin: 2.5rem 0 0 0;
+  .portfolio__img {
+    order: 1;
+    width: 100%;
+  }
+  .portfolio-info {
+    width: 100%;
+    order: 2;
+    margin-top: 3.125rem;
+  }
+  .info {
+    padding: 150px 15px 50px 15px;
   }
 }
 
 @media (max-width: 500px) {
   html {
-    font-size: 10px;
+    font-size: 12px;
   }
-}
-
-@media (max-width: 400px) {
-  .contacts {
-    flex-wrap: wrap;
-    justify-content: flex-start;
+  .menu {
+    height: 70px;
+    padding-left: 20px;
   }
-  .contacts__item {
-    margin: 1.5rem;
+  .info {
+    padding: 100px 15px 50px 15px;
   }
 }
